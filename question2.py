@@ -9,7 +9,7 @@ def discount():
 
     if product == "X":
         if (int(units) * 80) > 10000:
-            discount = .1 * (int(units) * 80)
+            discount = .15 * (int(units) * 80)
 
     return discount
 
