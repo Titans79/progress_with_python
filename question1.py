@@ -22,7 +22,7 @@ if int(kilos_picked) > 20:
     bonus = 4 * (int(kilos_picked) - 20)
 
 # daily wages
-wages = allowances + (int(kilos_picked) * 7) + bonus
+wages = allowances + (int(kilos_picked) * 7)
 
 
 # output

@@ -1,15 +1,15 @@
-#input
+#INPUT
 customer_name = input("Customer Name: ")
 product = input("Enter Product (X, Y, Z): ")
-units = input("Units bought: ")
+units_purchased = int(input("Units purchased: "))
 
 # discount
 def discount():
     discount = 0
 
     if product == "X":
-        if (int(units) * 80) > 10000:
-            discount = .15 * (int(units) * 80)
+        if (units_purchased * 80) > 10000:
+            discount = .15 * (units_purchased * 80)
 
     return discount
 
@@ -18,7 +18,7 @@ def discount():
 vat = 0
 
 if product == "Y":
-    vat = 0.16 * (int(units) * 95)
+    vat = 0.16 * (units_purchased * 95)
 
 
 # pay
@@ -31,7 +31,7 @@ elif product == "Y":
 elif product == "Z":
     price = 135
 
-pay = price * int(units) - discount() + vat
+pay = price * units_purchased - discount() + vat
 
 
 # output

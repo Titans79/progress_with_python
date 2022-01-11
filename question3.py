@@ -51,8 +51,11 @@ def gross_pay():
 # TAX
 tax = 0
 
-if gross_pay() > 33000:
-    tax = .1 * gross_pay()
+taxable_income = gross_pay() - 33000
+
+if taxable_income > 33000:
+    tax = .1 * taxable_income
+
 
 # NET PAY
 net_pay = gross_pay() - tax
@@ -60,10 +63,11 @@ net_pay = gross_pay() - tax
 
 # OUTPUT ->
 
-print(("*")*40)
+print("**************************")
 print(f" Payroll Number => { payrol_No }")
 print(f" Gross Pay => { gross_pay() }")
+print(f" Tax => { tax }")
 print(f" Net Pay => { net_pay }")
-print(("*")*40)
+print("**************************")
 
 
